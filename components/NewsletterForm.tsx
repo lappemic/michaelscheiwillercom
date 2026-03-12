@@ -43,12 +43,12 @@ const NewsletterForm = () => {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
-          className="w-full rounded-md border border-gray-300 bg-white px-4 py-2 text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100 dark:focus:border-primary-500 dark:focus:ring-primary-500"
+          className="w-full rounded-lg border border-warm-300 bg-warm-50 px-4 py-2 text-warm-900 transition-colors duration-200 focus:border-accent-500 focus:ring-accent-500 dark:border-warm-700 dark:bg-warm-900 dark:text-warm-100 dark:focus:border-accent-500 dark:focus:ring-accent-500"
         />
         <button
           type="submit"
           disabled={isLoading}
-          className="mt-2 rounded-md bg-primary-500 px-4 py-2 font-medium text-white hover:bg-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 disabled:opacity-50 dark:ring-offset-gray-900 sm:ml-2 sm:mt-0"
+          className="mt-2 rounded-lg bg-accent-500 px-4 py-2 font-medium text-white transition-colors duration-200 hover:bg-accent-600 focus:outline-none focus:ring-2 focus:ring-accent-500 focus:ring-offset-2 disabled:opacity-50 dark:ring-offset-warm-950 sm:ml-2 sm:mt-0"
         >
           {isLoading ? 'Subscribing...' : 'Subscribe'}
         </button>

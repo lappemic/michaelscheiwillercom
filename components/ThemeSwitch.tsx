@@ -46,7 +46,7 @@ const ThemeSwitch = () => {
     <button
       aria-label="Toggle Dark Mode"
       type="button"
-      className="mr-5 flex h-8 w-8 items-center justify-center rounded p-1 hover:bg-gray-200 dark:hover:bg-gray-700"
+      className="mr-5 flex h-8 w-8 items-center justify-center rounded p-1 text-warm-600 transition-colors duration-200 hover:bg-warm-200 hover:text-warm-900 dark:text-warm-400 dark:hover:bg-warm-800 dark:hover:text-warm-100"
       onClick={toggleTheme}
     >
       {mounted && (resolvedTheme === 'dark' ? <Moon /> : <Sun />)}

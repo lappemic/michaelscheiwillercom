@@ -13,7 +13,7 @@ interface CardProps {
 export default function Card({ title, description, imgSrc, href, badge }: CardProps) {
   return (
     <div className="w-full">
-      <div className="flex overflow-hidden rounded-md border border-neutral-200 dark:border-neutral-800">
+      <div className="flex overflow-hidden rounded-lg border border-warm-200 bg-warm-100/50 transition-all duration-300 hover:border-warm-300 hover:shadow-md dark:border-warm-800 dark:bg-warm-900/50 dark:hover:border-warm-600">
         {imgSrc && (
           <div className="hidden w-1/4 max-w-[180px] sm:block">
             {href ? (
@@ -37,9 +37,9 @@ export default function Card({ title, description, imgSrc, href, badge }: CardPr
             )}
           </div>
         )}
-        <div className="flex-1 p-4">
+        <div className="flex-1 p-6">
           <div className="flex items-center gap-2">
-            <h2 className="text-lg font-medium leading-6 tracking-tight text-neutral-900 dark:text-neutral-100">
+            <h2 className="font-serif text-xl leading-6 tracking-tight text-warm-900 dark:text-warm-100">
               {href ? (
                 <Link href={href} aria-label={`Link to ${title}`}>
                   {title}
@@ -49,19 +49,19 @@ export default function Card({ title, description, imgSrc, href, badge }: CardPr
               )}
             </h2>
             {badge && (
-              <span className="rounded-full bg-neutral-200 px-2 py-0.5 text-xs font-medium text-neutral-600 dark:bg-neutral-700 dark:text-neutral-300">
+              <span className="rounded-full bg-warm-200 px-2 py-0.5 text-xs font-medium text-warm-600 dark:bg-warm-700 dark:text-warm-300">
                 {badge}
               </span>
             )}
           </div>
           <p
-            className="prose mt-1 line-clamp-2 text-sm text-neutral-600 dark:text-neutral-300"
+            className="prose mt-2 line-clamp-2 text-sm text-warm-600 dark:text-warm-400"
             dangerouslySetInnerHTML={{ __html: parseMarkdownLinks(description) }}
           />
           {href && (
             <Link
               href={href}
-              className="mt-2 inline-block text-xs font-medium text-neutral-900 underline decoration-neutral-400 decoration-1 underline-offset-2 hover:decoration-neutral-600 dark:text-neutral-100 dark:decoration-neutral-600 dark:hover:decoration-neutral-400"
+              className="mt-3 inline-block text-xs font-medium text-warm-900 underline decoration-warm-300 decoration-1 underline-offset-4 transition-colors duration-200 hover:text-accent-500 hover:decoration-accent-500 dark:text-warm-100 dark:decoration-warm-600 dark:hover:text-accent-400 dark:hover:decoration-accent-400"
               aria-label={`Link to ${title}`}
             >
               Read more

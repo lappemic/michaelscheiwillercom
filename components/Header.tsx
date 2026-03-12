@@ -8,7 +8,7 @@ import Image from 'next/image'
 
 const Header = () => {
   return (
-    <header className="flex items-center justify-between border-b border-neutral-200 py-8 dark:border-neutral-800">
+    <header className="flex items-center justify-between py-6">
       <div>
         <Link href="/" aria-label={siteMetadata.headerTitle}>
           <div className="flex items-center gap-2">
@@ -20,7 +20,7 @@ const Header = () => {
               className="dark:invert"
             />
             {typeof siteMetadata.headerTitle === 'string' ? (
-              <div className="text-lg font-medium tracking-tight text-neutral-900 hover:text-neutral-700 dark:text-neutral-100 dark:hover:text-neutral-300">
+              <div className="font-serif text-xl text-warm-900 transition-colors duration-200 hover:text-accent-500 dark:text-warm-100 dark:hover:text-accent-400">
                 {siteMetadata.headerTitle}
               </div>
             ) : (
@@ -36,7 +36,7 @@ const Header = () => {
             <Link
               key={link.title}
               href={link.href}
-              className="hidden text-sm font-medium text-neutral-700 hover:text-neutral-900 dark:text-neutral-300 dark:hover:text-neutral-100 sm:block"
+              className="hidden text-sm font-medium tracking-wide text-warm-600 transition-colors duration-200 hover:text-warm-900 dark:text-warm-400 dark:hover:text-warm-100 sm:block"
             >
               {link.title}
             </Link>
