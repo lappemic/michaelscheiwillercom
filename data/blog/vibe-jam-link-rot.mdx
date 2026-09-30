@@ -1,0 +1,54 @@
+---
+title: "42% of the games from last year's Vibe Jam are already offline"
+date: '2026-09-30'
+tags: ['vibe-coding', 'ai', 'games', 'data']
+draft: false
+summary: "Half of last year's vibe-coded games are already gone. Where a game is hosted predicts whether it survives."
+---
+
+I keep a curated list of games built mostly with AI. This month I checked every link: **28 of 61 were broken.** Six of those games had moved somewhere else. The other **22 were gone for good.**
+
+So I looked at a bigger sample. Pieter Levels' Vibe Jam publishes an open API with every entry from both editions and whether it still loads:
+
+|                                | Games | Offline today |
+| ------------------------------ | ----- | ------------- |
+| Vibe Jam 2025                  | 1,083 | **42%**       |
+| Vibe Jam 2026 (ended May 2026) | 945   | 13%           |
+
+Four in ten games from a jam with more than 1,000 entries have disappeared within about a year and a half.
+
+## Where a game is hosted predicts whether it survives
+
+| Host          | 2025 games | Offline | 2026 games | Offline |
+| ------------- | ---------- | ------- | ---------- | ------- |
+| Custom domain | 804        | **50%** | 581        | 14%     |
+| vercel.app    | 98         | 14%     | 177        | 7%      |
+| netlify.app   | 48         | 15%     | 53         | 4%      |
+| github.io     | 61         | 20%     | 35         | 9%      |
+| pages.dev     | 8          | 0%      | 37         | 3%      |
+| onrender.com  | 27         | 30%     | 14         | 29%     |
+| railway.app   | 2          | —       | 14         | **86%** |
+
+Two patterns:
+
+1. **Custom domains lapse.** Half of the 2025 games on their own `.com` or `.io` are offline. Free static subdomains (Vercel, Netlify, Cloudflare Pages, GitHub Pages) lost 0–20%. A domain is a yearly bill, and a jam game isn't worth renewing for most people.
+2. **Servers die, static files don't.** Games that need a running backend on Railway, Render or Fly are dying fastest. 12 of the 14 Railway-hosted 2026 games are already offline after five months. Free trials end and free tiers sleep, while a static bundle on a CDN costs nothing to keep alive.
+
+## What the survivors are built with
+
+- **Three.js is the default engine of vibe coding:** 60% of 2025 entries and 65% of 2026. Phaser holds at 5–6%, and Godot went from 5 games to 21.
+- In my curated list, where creators say which AI they used, **Claude appears in 25 of 35 games** (Claude Code in 7). Cursor is in 13, and Codex and Grok in 4 each.
+
+## If you ship a vibe-coded game
+
+- Deploy the static build to a free subdomain host **and** point your custom domain at it. If the domain lapses, the subdomain still works.
+- Keep multiplayer optional, so the single-player game survives when the server doesn't.
+- Put the source on GitHub, so you or anyone else can redeploy it later.
+
+## Method and caveats
+
+- **Offline status** is the `is_up` flag from vibejam.com/api as of 2026-09-24. I didn't re-check the 2,028 URLs individually.
+- **Small samples:** Railway (2025), pages.dev (2025) and Fly.io have too few games to generalize.
+- **My own list** was checked by hand (HTTP status, rendered page, and whether the URL still hosts the same game).
+
+The rebuilt list, with 61 games that all work today, grouped by genre with the AI tools and engine behind each: [Awesome AI-Built Games](https://github.com/lappemic/awesome-ai-built-games)
