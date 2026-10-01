@@ -9,26 +9,26 @@ export const metadata: Metadata = {
 export default function Now() {
   return (
     <>
-      <div className="divide-y divide-gray-200 dark:divide-gray-700">
+      <div className="divide-y divide-warm-200 dark:divide-warm-700">
         <div className="space-y-2 pb-8 pt-6 md:space-y-5">
-          <h1 className="text-2xl font-bold leading-8 tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl sm:leading-9">
+          <h1 className="font-serif text-2xl leading-8 tracking-tight text-warm-900 dark:text-warm-100 sm:text-3xl sm:leading-9">
             Now
           </h1>
-          <p className="text-base leading-7 text-gray-500 dark:text-gray-400">
+          <p className="text-base leading-7 text-warm-600 dark:text-warm-400">
             What I'm focusing on right now
           </p>
         </div>
         <div className="items-start space-y-2 xl:grid xl:grid-cols-3 xl:gap-x-8 xl:space-y-0">
           <div className="dark:prose-dark prose max-w-none pb-8 pt-8 xl:col-span-3">
             <section className="mb-8">
-              <h2 className="mb-4 text-xl font-bold text-gray-900 dark:text-gray-100">
+              <h2 className="mb-4 font-serif text-xl text-warm-900 dark:text-warm-100">
                 Current Focus
               </h2>
-              <p className="text-base text-gray-800 dark:text-gray-200">
+              <p className="text-base text-warm-700 dark:text-warm-300">
                 This is my personal "now page" — inspired by{' '}
                 <Link
                   href="https://nownownow.com/about"
-                  className="text-primary-500 hover:text-primary-400 dark:text-primary-400 dark:hover:text-primary-300"
+                  className="text-accent-500 transition-colors duration-200 hover:text-accent-600 dark:text-accent-400 dark:hover:text-accent-400"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -39,15 +39,15 @@ export default function Now() {
             </section>
 
             <section className="mb-8">
-              <h3 className="mb-4 text-lg font-bold text-gray-900 dark:text-gray-100">
+              <h3 className="mb-4 font-serif text-lg text-warm-900 dark:text-warm-100">
                 Professional
               </h3>
-              <ul className="list-disc space-y-1 pl-6 text-base text-gray-800 dark:text-gray-200">
+              <ul className="list-disc space-y-1 pl-6 text-base text-warm-700 dark:text-warm-300">
                 <li>
                   Working on{' '}
                   <Link
                     href="https://leadershipbuddy.ch"
-                    className="text-primary-500 hover:text-primary-400 dark:text-primary-400 dark:hover:text-primary-300"
+                    className="text-accent-500 transition-colors duration-200 hover:text-accent-600 dark:text-accent-400 dark:hover:text-accent-400"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -58,7 +58,7 @@ export default function Now() {
                   Rebranding from freelancing to engineering studio{' '}
                   <Link
                     href="https://bytebricks.ch"
-                    className="text-primary-500 hover:text-primary-400 dark:text-primary-400 dark:hover:text-primary-300"
+                    className="text-accent-500 transition-colors duration-200 hover:text-accent-600 dark:text-accent-400 dark:hover:text-accent-400"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -70,14 +70,14 @@ export default function Now() {
             </section>
 
             <section className="mb-8">
-              <h3 className="mb-4 text-lg font-bold text-gray-900 dark:text-gray-100">Personal</h3>
-              <ul className="list-disc space-y-1 pl-6 text-base text-gray-800 dark:text-gray-200">
+              <h3 className="mb-4 font-serif text-lg text-warm-900 dark:text-warm-100">Personal</h3>
+              <ul className="list-disc space-y-1 pl-6 text-base text-warm-700 dark:text-warm-300">
                 <li>Parenting takes up quite some time</li>
                 <li>
                   Reading a lot since i heard{' '}
                   <Link
                     href="https://x.com/naval"
-                    className="text-primary-500 hover:text-primary-400 dark:text-primary-400 dark:hover:text-primary-300"
+                    className="text-accent-500 transition-colors duration-200 hover:text-accent-600 dark:text-accent-400 dark:hover:text-accent-400"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -86,7 +86,7 @@ export default function Now() {
                   podcast with{' '}
                   <Link
                     href="https://x.com/tferriss"
-                    className="text-primary-500 hover:text-primary-400 dark:text-primary-400 dark:hover:text-primary-300"
+                    className="text-accent-500 transition-colors duration-200 hover:text-accent-600 dark:text-accent-400 dark:hover:text-accent-400"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -97,7 +97,7 @@ export default function Now() {
                   I try to write (see{' '}
                   <Link
                     href="/blog"
-                    className="text-primary-500 hover:text-primary-400 dark:text-primary-400 dark:hover:text-primary-300"
+                    className="text-accent-500 transition-colors duration-200 hover:text-accent-600 dark:text-accent-400 dark:hover:text-accent-400"
                   >
                     blog
                   </Link>

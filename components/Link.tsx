@@ -8,7 +8,7 @@ const CustomLink = ({ href, ...rest }: LinkProps & AnchorHTMLAttributes<HTMLAnch
   const isAnchorLink = href && href.startsWith('#')
 
   const baseClasses =
-    'underline decoration-neutral-400 decoration-1 underline-offset-2 hover:decoration-neutral-600 dark:decoration-neutral-700 dark:hover:decoration-neutral-500'
+    'underline decoration-warm-300 decoration-1 underline-offset-4 transition-colors duration-200 hover:text-accent-500 hover:decoration-accent-500 dark:decoration-warm-700 dark:hover:decoration-accent-400 dark:hover:text-accent-400'
 
   if (isInternalLink) {
     return <Link href={href} className={baseClasses} {...rest} />
